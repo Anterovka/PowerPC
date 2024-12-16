@@ -1,0 +1,1521 @@
+
+/* Mobile */
+@media (max-width: 480px) {
+  /* styles*/
+}
+
+/* Extra small devices */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* styles*/
+}
+
+/* Small tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* styles*/
+}
+
+/* Large tablets/laptops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* styles*/
+}
+
+/* Desktops */
+@media (min-width: 1200px) and (max-width: 1919px) {
+  /* styles*/
+}
+
+/* Extra large screens */
+@media (min-width: 1920px) {
+  /* styles*/
+}
+
+
+:root {
+      --primary: #202020;
+      --secondary: #d8d8d8;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-wrapper {
+    position: relative; /* Устанавливаем относительное позиционирование для контейнера */
+    display: flex; /* Используем flexbox для размещения стрелок и контейнера */
+    align-items: center; /* Центрируем элементы по вертикали */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    width: 100%; /* Устанавливаем ширину в 100% */
+    max-width: 1600px; /* Устанавливаем максимальную ширину */
+    margin: 0 auto; /* Центрируем контейнер на странице */
+    overflow: hidden; /* Скрываем полосу прокрутки */
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    padding-right: 20px;
+    scroll-behavior: smooth; /* Плавная прокрутка при использовании скролла */
+    overflow: hidden; /* Скрываем полосу прокрутки */
+    -webkit-overflow-scrolling: touch; /* Улучшает прокрутку на сенсорных устройствах */
+}
+
+.scroll-btn {
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    z-index: 1;
+}
+
+.scroll-btn.left {
+    margin-right: 10px; /* Отступ между кнопкой и контейнером */
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+
+.scroll-btn.right {
+    margin-left: 10px; /* Отступ между кнопкой и контейнером */
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+
+/* Скрываем стрелки на экранах шире 768 пикселей */
+@media (min-width: 1024px) {
+    .scroll-btn {
+        display: none; /* Скрываем стрелки */
+    }
+}
+
+
+.autocomplete-suggestions {
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: #161616;
+    z-index: 1000;
+    border-radius: 10px;
+    color: var(--secondary);
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+    margin: 0; /* Убираем внешние отступы */
+    width: 80%; /* Устанавливаем ширину в 100% относительно родительского элемента */
+    box-sizing: border-box; /* Учитываем границы в ширине */
+    top: 80%; /* Сместить вниз на 100% высоты родительского элемента */
+}
+
+.autocomplete-suggestion {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.autocomplete-suggestion:hover {
+    background-color: #5e5e5e;
+}
+
+
+body {
+  /* Устанавливаем градиентный фон */
+  background: rgb(199,28,192);
+  background: linear-gradient(42deg, rgba(199,28,192,1) 0%, rgba(9,9,121,1) 27%, rgba(19,100,170,1) 34%, rgba(179,4,187,1) 50%, rgba(35,26,171,1) 62%, rgba(162,23,200,1) 75%, rgba(47,147,226,1) 89%, rgba(0,74,255,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* Убираем отступы и поля */
+  margin: 0; 
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--secondary);
+  line-height: 1.6;
+  padding: 0;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(83,9,79);
+  background: linear-gradient(42deg, rgba(83,9,79,1) 0%, rgba(14,9,93,1) 28%, rgba(83,3,87,1) 62%, rgba(0,34,117,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+ 
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #cccccc;
+  border-top-color: #1a1a1a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+ 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+header {
+/* прилепляем её */
+height: 150px;
+position: sticky;
+top: -50px; /* умножаем на -1, будет отрицательным */
+display: flex;
+align-items: center;
+  text-align: center;
+  background: var(--primary);
+  justify-content: center;
+  z-index: 9;
+}
+
+.responsive-wrapper {
+width: 90%;
+max-width: 1280px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.header_inner {
+height: 100px;
+position: sticky;
+top: 0;
+display: flex;
+align-items: center;
+  text-align: center;
+justify-content: space-between;
+}
+
+a h1 {
+  color:var(--secondary);
+}
+
+.logo {
+  width: 150px;
+  transition: 0.75s;
+}
+
+.logo:hover {
+  transform:scale(1.1)
+}
+
+.cart {
+  width: 35px;
+  transition: 0.75s;
+  background-color: #1e1e1e00; /* Цвет фона кнопки */
+  color: #ffffff; /* Цвет текста кнопки */
+  border: none; /* Убираем рамку */
+  padding: 10px 0px; /* Внутренние отступы кнопки */
+  cursor: pointer; /* Курсор при наведении */
+  border-radius: 5px; /* Закругленные углы */
+  text-decoration: none; /* Убираем подчеркивание */
+  font-size: 24px; /* Размер иконки */
+}
+
+.cart:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+  backdrop-filter: blur(5px); /* Эффект размытия */
+  display: none; /* Скрываем по умолчанию */
+  z-index: 999; /* Убедитесь, что элемент выше других */
+}
+
+.cart-button {
+  position: fixed; /* Фиксированное положение */
+  right: 20px; /* Отступ от правого края */
+  top: 20px; /* Отступ от верхнего края */
+  background-color: #1e1e1e; /* Цвет фона кнопки */
+  color: #ffffff; /* Цвет текста кнопки */
+  border: none; /* Убираем рамку */
+  padding: 10px; /* Внутренние отступы кнопки */
+  cursor: pointer; /* Курсор при наведении */
+  border-radius: 5px; /* Закругленные углы */
+  text-decoration: none; /* Убираем подчеркивание */
+  font-size: 24px; /* Размер иконки */
+}
+
+.cart-popup {
+  display: none; /* Скрываем всплывающее окно по умолчанию */
+  position: fixed; /* Фиксированное положение */
+  top: 50%; /* Центрируем по вертикали */
+  left: 50%; /* Центрируем по горизонтали */
+  background-color: #1e1e1e; /* Цвет фона всплывающего окна */
+  padding: 20px; /* Внутренние отступы */
+  border-radius: 10px; /* Закругленные углы */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень */
+  z-index: 10000; /* Уровень наложения */
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  width: 90%; /* Ширина окна для мобильных устройств */
+  max-width: 600px; /* Максимальная ширина окна */
+  height: auto; /* Высота автоматически подстраивается под содержимое */
+}
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 600px) {
+  .cart-popup {
+      width: 95%; /* Ширина окна для мобильных устройств */
+      padding: 15px; /* Уменьшенные отступы */
+  }
+
+  .close-button, .checkout-button {
+      font-size: 16px; /* Уменьшенный размер шрифта для кнопок */
+      padding: 10px; /* Уменьшенные отступы для кнопок */
+  }
+}
+
+  .customer-info label {
+      font-size: 14px; /* Уменьшенный размер шрифта для меток */
+  }
+
+  .customer-info input {
+      font-size: 14px; /* Уменьшенный размер шрифта для полей ввода */
+      width: 80%; /* Уменьшенная ширина полей ввода */
+      padding: 8px; /* Отступы внутри полей ввода */
+      margin-bottom: 10px; /* Отступ между полями ввода */
+      border: 1px solid #ccc; /* Рамка полей ввода */
+      border-radius: 4px; /* Закругленные углы */
+  }
+
+.close-button {
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #00000000;
+	border-radius: 13px;
+	height: 37px;
+	font-size: 14px;
+  font-style: normal;
+	color: var(--secondary);
+	background-color: #1a1a1a;
+	box-shadow: 0 4px 6px rgba(22, 22, 22, 0.288), 0 1px 3px rgba(0, 0, 0, 0.24);
+	cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-button:hover {
+  background-color: #141414;
+  transform: scale(1.05);
+}
+
+.checkout-button {
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #00000000;
+	border-radius: 13px;
+	height: 37px;
+	font-size: 14px;
+  font-style: normal;
+	color: var(--secondary);
+	background-color: #3f007a;
+	box-shadow: 0 4px 6px rgba(22, 22, 22, 0.288), 0 1px 3px rgba(0, 0, 0, 0.24);
+	cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkout-button:hover {
+  background-color: #330063;
+  transform: scale(1.05);
+}
+
+#cartPopup[open]::backdrop {
+  backdrop-filter: blur(2px);
+}
+
+.components {
+  display: flex;
+  flex-direction: column; /* Вертикальное расположение компонентов */
+  margin-top: 10px; /* Отступ сверху */
+}
+
+.component {
+  display: flex; /* Используем flexbox для выравнивания */
+  justify-content: start; /* Распределяем пространство между элементами */
+  padding: 5px 5px 0 5px; /* Отступы сверху и снизу */
+  border-bottom: 1px solid #ccc; /* Нижняя граница для разделения компонентов */
+  color: var(--secondary);
+  margin-bottom: 10px; /* Отступ между компонентами */;
+}
+
+.component strong {
+  color: var(--secondary); /* Цвет текста для названий компонентов */
+  margin-right: 5px; /* Отступ справа от strong */
+  font-weight: bold; /* Убедитесь, что текст жирный */
+}
+
+.price {
+  font-size: 1.55em; /* Увеличьте размер шрифта */
+  margin-bottom: 20px; /* Отступ снизу для разделения с комплектующими */
+  color: #b999db; /* Цвет текста (можно изменить по желанию) */
+}
+
+.cart-popup.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.customer-info {
+  margin-top: 20px; /* Отступ сверху */
+  margin-bottom: 20px;
+}
+
+.customer-info label {
+  display: block; /* Отображаем метки как блочные элементы */
+  margin-bottom: 5px; /* Отступ снизу */
+  font-weight: bold; /* Жирный шрифт для меток */
+}
+
+.customer-info input {
+}
+
+.customer-info input {
+  color: var(--secondary);
+  width: 50%; /* Ширина 100% для полей ввода */
+  padding: 10px; /* Отступ внутри полей ввода */
+  margin-bottom: 15px; /* Отступ снизу */
+  border: 1px solid #ccc; /* Граница */
+  border-radius: 8px; /* Закругленные углы */
+  box-sizing: border-box; /* Учитываем отступы и границы в ширине */
+  background-color: #161616;
+}
+
+.customer-info input:focus {
+  border-color: #450094; /* Цвет границы при фокусе */
+  outline: none; /* Убираем стандартный контур */
+}
+
+  .auth-info label {
+  display: block; /* Отображаем метки как блочные элементы */
+  margin-bottom: 5px; /* Отступ снизу */
+  font-weight: bold; /* Жирный шрифт для меток */
+  }
+
+ .auth-info input {
+  color: var(--secondary);
+  width: 50%; /* Ширина 100% для полей ввода */
+  padding: 10px; /* Отступ внутри полей ввода */
+  margin-bottom: 15px; /* Отступ снизу */
+  border: 1px solid #ccc; /* Граница */
+  border-radius: 8px; /* Закругленные углы */
+  box-sizing: border-box; /* Учитываем отступы и границы в ширине */
+  background-color: #161616;
+  }
+
+  .register-info label {
+  display: block; /* Отображаем метки как блочные элементы */
+  margin-bottom: 5px; /* Отступ снизу */
+  font-weight: bold; /* Жирный шрифт для меток */
+  }
+
+  .register-info input {
+  color: var(--secondary);
+  width: 50%; /* Ширина 100% для полей ввода */
+  padding: 10px; /* Отступ внутри полей ввода */
+  margin-bottom: 15px; /* Отступ снизу */
+  border: 1px solid #ccc; /* Граница */
+  border-radius: 8px; /* Закругленные углы */
+  box-sizing: border-box; /* Учитываем отступы и границы в ширине */
+  background-color: #161616;
+  }
+
+  .register-info input:focus {
+  border-color: #450094; /* Цвет границы при фокусе */
+  outline: none; /* Убираем стандартный контур */
+}
+
+  .auth-info input:focus {
+  border-color: #450094; /* Цвет границы при фокусе */
+  outline: none; /* Убираем стандартный контур */
+}
+
+.overlay.show {
+  display: block; /* Показываем фон при открытии попапа */
+}
+
+.add-button, .remove-button {
+  background-color: transparent; /* Прозрачный фон */
+  border: solid rgb(39, 39, 39);
+  border-radius: 5px;
+  cursor: pointer; /* Указываем, что это кнопка */
+  color: inherit; /* Унаследовать цвет текста от родителя */
+  font-size: inherit; /* Унаследовать размер шрифта от родителя */
+  transition: 0.3s;
+}
+
+.add-button:hover, .remove-button:hover {
+  color: rgba(134, 134, 134, 0.726); /* Изменение цвета текста при наведении */
+  border: solid rgb(56, 56, 56);
+}
+
+.buttonhunt {
+  background-color: rgba(33,22,22,0);
+  border: none; 
+  outline: none;
+  cursor: pointer;
+}
+
+.modal {
+  padding: 0;
+  border: none;
+  background-color: var(--primary);
+  border-radius: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  align-items: center;
+  text-align: center;
+  color: var(--secondary)
+}
+
+.modal1 {
+  padding: 0;
+  border: none;
+  background-color: var(--primary);
+  border-radius: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  align-items: center;
+  text-align: center;
+  color: var(--secondary)
+}
+
+.modal2 {
+  padding: 0;
+  border: none;
+  background-color: var(--primary);
+  border-radius: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  align-items: center;
+  text-align: center;
+  color: var(--secondary)
+}
+
+.modal3 {
+  padding: 0;
+  border: none;
+  background-color: var(--primary);
+  border-radius: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  align-items: center;
+  text-align: center;
+  color: var(--secondary)
+}
+
+.buttonvill {
+  background-color: rgba(33,22,22,0);
+  border: none; 
+  outline: none;
+  cursor: pointer;
+}
+
+.buttonvort {
+  background-color: rgba(33,22,22,0);
+  border: none; 
+  outline: none;
+  cursor: pointer;
+}
+
+.buttonstorm {
+  background-color: rgba(33,22,22,0);
+  border: none; 
+  outline: none;
+  cursor: pointer;
+}
+
+.buy {
+	box-sizing: border-box;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #00000000;
+	border-radius: 13px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px;
+  font-style: normal;
+	color: var(--secondary);
+	background-color: #3f007a;
+	box-shadow: 0 4px 6px rgba(22, 22, 22, 0.288), 0 1px 3px rgba(0, 0, 0, 0.24);
+	cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy:hover {
+  background-color: #330063;
+  transform: scale(1.05);
+}
+
+.cls {
+	box-sizing: border-box;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #00000000;
+	border-radius: 13px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px;
+  font-style: normal;
+	color: var(--secondary);
+	background-color: #1a1a1a;
+	box-shadow: 0 4px 6px rgba(22, 22, 22, 0.288), 0 1px 3px rgba(0, 0, 0, 0.24);
+	cursor: pointer;
+  transition: 0.3s;
+}
+
+.cls:hover {
+  background-color: #141414;
+  transform: scale(1.05);
+}
+
+.modal[open]::backdrop {
+  backdrop-filter: blur(2px);
+}
+
+
+.modal p {
+  color: white;
+  padding-bottom: 5%;
+  font-size: 30px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.modal img {
+}
+
+.modal[open] {
+  animation: show 1s;
+}
+
+.modal.hide {
+  animation: hide 1s;
+}
+
+.buy1 {
+	box-sizing: border-box;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #00000000;
+	border-radius: 13px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px;
+  font-style: normal;
+	color: var(--secondary);
+	background-color: #3f007a;
+	box-shadow: 0 4px 6px rgba(22, 22, 22, 0.288), 0 1px 3px rgba(0, 0, 0, 0.24);
+	cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy1:hover {
+  background-color: #330063;
+  transform: scale(1.05);
+}
+
+.cls1 {
+	box-sizing: border-box;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #00000000;
+	border-radius: 13px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px;
+  font-style: normal;
+	color: var(--secondary);
+	background-color: #1a1a1a;
+	box-shadow: 0 4px 6px rgba(22, 22, 22, 0.288), 0 1px 3px rgba(0, 0, 0, 0.24);
+	cursor: pointer;
+  transition: 0.3s;
+}
+
+.cls1:hover {
+    background-color: #141414;
+    transform: scale(1.05);
+}
+
+.modal1[open]::backdrop {
+  backdrop-filter: blur(2px);
+}
+
+
+.modal1 p {
+  color: white;
+  padding-bottom: 5%;
+  font-size: 30px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.modal1 img {
+}
+
+.modal1[open] {
+  animation: show 1s;
+}
+
+.modal1.hide {
+  animation: hide 1s;
+}
+
+.buy2 {
+	box-sizing: border-box;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #00000000;
+	border-radius: 13px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px;
+  font-style: normal;
+	color: var(--secondary);
+	background-color: #3f007a;
+	box-shadow: 0 4px 6px rgba(22, 22, 22, 0.288), 0 1px 3px rgba(0, 0, 0, 0.24);
+	cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy2:hover {
+  background-color: #330063;
+  transform: scale(1.05);
+}
+
+.cls2 {
+	box-sizing: border-box;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #00000000;
+	border-radius: 13px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px;
+  font-style: normal;
+	color: var(--secondary);
+	background-color: #1a1a1a;
+	box-shadow: 0 4px 6px rgba(22, 22, 22, 0.288), 0 1px 3px rgba(0, 0, 0, 0.24);
+	cursor: pointer;
+  transition: 0.3s;
+}
+
+.cls2:hover {
+  background-color: #141414;
+  transform: scale(1.05);
+}
+
+.modal2[open]::backdrop {
+  backdrop-filter: blur(2px);
+}
+
+
+.modal2 p {
+  color: white;
+  padding-bottom: 5%;
+  font-size: 30px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.modal2 img {
+}
+
+.modal2[open] {
+  animation: show 1s;
+}
+
+.modal2.hide {
+  animation: hide 1s;
+}
+
+.buy3 {
+	box-sizing: border-box;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #00000000;
+	border-radius: 13px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px;
+  font-style: normal;
+	color: var(--secondary);
+	background-color: #3f007a;
+	box-shadow: 0 4px 6px rgba(22, 22, 22, 0.288), 0 1px 3px rgba(0, 0, 0, 0.24);
+	cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy3:hover {
+  background-color: #330063;
+  transform: scale(1.05);
+}
+
+.cls3 {
+	box-sizing: border-box;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #00000000;
+	border-radius: 13px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 14px;
+  font-style: normal;
+	color: var(--secondary);
+	background-color: #1a1a1a;
+	box-shadow: 0 4px 6px rgba(22, 22, 22, 0.288), 0 1px 3px rgba(0, 0, 0, 0.24);
+	cursor: pointer;
+  transition: 0.3s;
+}
+
+.cls3:hover {
+  background-color: #141414;
+  transform: scale(1.05);
+}
+
+.modal3[open]::backdrop {
+  backdrop-filter: blur(2px);
+}
+
+
+.modal3 p {
+  color: white;
+  padding-bottom: 5%;
+  font-size: 30px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.modal3 img {
+}
+
+.modal3[open] {
+  animation: show 1s;
+}
+
+.modal3.hide {
+  animation: hide 1s;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes hide {
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+.burger {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  text-align: center;
+}
+
+nav > a img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.burger ul {
+  display: flex;
+  gap: 5px;
+  transition: 0.5s;
+  list-style: none;
+  padding: 0;
+}
+
+.burger li a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+
+.burger ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.burger li {
+  transition: 0.5s;
+}
+
+.burger li:hover {
+  transform: scale(1.1);
+}
+
+.burger ul li a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+label {
+  display: none;
+}
+
+#burger-toggle {
+  display: none;
+}
+
+
+
+@media (max-width: 784px) {
+  label {
+    position: relative;
+    display: block;
+    height: 25px;
+
+  }
+
+  label::after, label::before, label span {
+    position: absolute;
+    width: 80%;
+    margin-left: 200%;
+    height: 2px;
+    background-color: var(--secondary);
+    transition: .3s;
+  }
+
+  label::before {
+    content: "";
+    top: 0;
+  }
+
+  label::after {
+    content: "";
+    bottom: 0;
+  }
+
+  label span {
+    top: 11px;
+  }
+
+  #burger-toggle:checked ~ label::after {
+    transform: rotate(45deg);
+    bottom: 10px;
+  }
+
+  #burger-toggle:checked ~ label::before {
+    transform: rotate(-45deg);
+    top: 12px;
+  }
+
+  #burger-toggle:checked ~ label span {
+    transform: rotate(-45deg);
+    top: 12px;
+  }
+
+  .burger ul {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: var(--primary);
+    padding-top: 50%;
+    padding-bottom: 20%;
+    z-index: -1;
+    flex-direction: column;
+    text-align: center;
+    left: -100vw;
+    right: 100vw;
+  }
+
+  #burger-toggle:checked ~ ul {
+    left: 0;
+    right: 0;
+  }
+
+  .burger li a {
+    font-size: 24px;
+  }
+}
+
+
+.help1 ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+.help1 ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.help1 ul li a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.section {
+  padding: 20px;
+  margin: 10px 0;
+  color: #0c0c0c;
+}
+
+.helped {
+
+  text-align: center;
+  padding: 10px 0;
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+.section1 {
+  background: #ffffff9f;
+  background: linear-gradient(#eeeeee9f, #eeeeeea4 0) padding-box;
+  border-radius: 20px;
+  text-decoration: double;
+  text-align: center;
+  padding: 0px 2%;
+  margin: 5% 0;
+  color: #181818;
+  transform: translateX(-150%);
+  animation: ani1 1s forwards;
+} 
+
+@keyframes ani1 {
+  0% {transform: translateX(-150%);}
+  100% {transform: translateY(0);}
+}
+
+.knopka {
+  margin-top: 100px;
+  margin: 10px;
+  padding-bottom: 20px;
+  transition: 0.5s;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+
+.arrow {
+  transition: transform 0.5s; /* Исправлено на правильный синтаксис */
+}
+
+.arrow:hover {
+  transform: translate(10px, 0); /* Смещение вправо на 10 пикселей */
+}
+
+.partners {
+    text-align: center; /* Центрируем текст */
+    margin: 80px;
+}
+
+.footer__partners-list {
+    display: flex; /* Устанавливаем флекс-контейнер */
+    justify-content: center; /* Центрируем логотипы */
+    flex-wrap: wrap; /* Позволяем переносить элементы на новую строку */
+    margin-bottom: 2.4375rem;
+    padding: 0; /* Убираем отступы */
+    list-style: none; /* Убираем маркеры списка */
+}
+
+.footer__partners-li {
+    display: flex;
+    justify-content: center; /* Центрируем логотипы внутри элемента списка */
+    align-items: center;
+    width: 200px; /* Убираем фиксированную ширину */
+    padding: 0 1rem; /* Добавляем отступы по бокам */
+    margin-top: 1.0625rem;
+    margin-bottom: 1.0625rem;
+}
+
+.footer__title {
+    font-size: 1.8rem;
+    line-height: 1;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+}
+
+.footer__partners-li img {
+    width: 180px; /* Установите желаемую ширину */
+    height: auto; /* Сохраняем пропорции изображения */
+}
+
+.knopka a {
+  color:#181818;
+  border: 2px solid rgba(140, 0, 255, 0.521);
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  background: #ffffff28;
+  transition: 0.5s;
+}
+
+.knopka:hover {
+  transform: scale(1.05);
+}
+
+.knopka a:hover {
+    background: #8c14bb;
+}
+
+
+.section1 h2 {
+  font-size: 47px;
+}
+
+
+.section1 p {
+  font-size: 20px;
+}
+
+.opis {
+  margin-bottom: 30px;
+}
+
+footer {
+  display:flex;
+  justify-content:space-evenly;
+  padding: 10px 0;
+  background: var(--primary);
+  color: var(--secondary);
+  text-decoration: none;
+  flex-direction: row;
+}
+
+footer a {
+  color: var(--secondary);
+  transition: 0.5s;
+}
+
+footer a:hover {
+  transform: scale(1.1);
+}
+
+.listed{
+  padding-top: 10px;
+  margin-left: 5px;
+  transition: 0.5s;
+}
+.listed:hover {
+  transform: scale(1.2);
+  filter: none;
+}
+
+.computers {
+  text-align: center;
+  padding: 10px 0;
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+.sections {
+  padding: 20px;
+  margin: 10px 0;
+  color: var(--secondary);
+  opacity: 0;
+  animation: comp 2.5s forwards;
+}
+
+@keyframes comp {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.computers h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.sections p {
+  font-size: 20px;
+}
+
+.complist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Убираем лишние элементы, которые выходят за пределы */
+}
+
+.scroll-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Убираем элементы, выходящие за пределы */
+}
+
+.scroll-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto; /* Горизонтальная прокрутка */
+  gap: 20px;
+  padding: 10px;
+  overflow-x: hidden;
+}
+
+.complist figure {
+  display: inline-block;
+  box-sizing: border-box;
+  justify-content: space-around;
+}
+
+.complist img {
+  width: 100%; /* Картинка растягивается */
+  min-width: 130px;
+  margin-right: 10px; /* Отступ между изображениями */
+  flex: 0 0 auto; /* Запрещаем уменьшение */
+  object-fit: cover;
+}
+
+.complist figcaption {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Кнопки прокрутки */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.scroll-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.scroll-btn.left {
+  z-index: 1;
+  left: 10px;
+}
+
+.scroll-btn.right {
+  z-index: 0;
+  right: 10px;
+}
+
+.comps {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  object-fit: cover;
+  padding: 10%;
+  border: #111111af;
+  background-color: #111111af;
+  border-radius: 3%;
+  transition: 1s;
+}
+
+.comps:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 960px) {
+  .comps {
+    width: 250px; /* Размер для средних экранов */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .comps {
+    width: 150px; /* Размер для мобильных экранов */
+  }
+}
+
+
+/* Стиль контейнера с отзывами */
+.koguvcavis-varazdel {
+    margin-top: 5%;
+    padding: 2% 0;
+    background: var(--primary)00;
+    color: var(--secondary);
+    text-align: center;
+}
+
+.sestim-donials {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 15px 20px;
+}
+
+.sectionesag {
+    width: 195px;
+    height: 3px;
+    background: #0059ff;
+    margin: 23px auto;
+}
+
+/* Контейнер для отзывов, с горизонтальной прокруткой */
+.sagestim-lonials {
+    display: flex;
+    flex-wrap: nowrap; /* Элементы не переносятся на новую строку */
+    justify-content: flex-start; /* Выравнивание элементов по левому краю */
+    overflow-x: auto; /* Горизонтальная прокрутка */
+    padding: 3%;
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+/* Отзывы */
+.vemotau-vokusipol {
+    flex: 0 0 33.33%; /* Отзывы занимают 33.33% ширины контейнера */
+    max-width: 33.33%; /* Максимальная ширина элемента */
+    box-sizing: border-box;
+    padding: 15px;
+    transition: transform 1s;
+    word-wrap: break-word; /* Разрешаем перенос слов, если они не помещаются */
+    white-space: normal; /* Разрешаем перенос текста */
+}
+
+@keyframes ani {
+    0% { transform: translateX(-150%); }
+    100% { transform: translateX(0); }
+}
+
+.vemotau-vokusipol {
+    animation: ani 1s forwards;
+}
+
+/* Стили для отзыва */
+/* Основной контейнер с отзывами */
+.koguvcavis-varazdel {
+    margin-top: 5%;
+    padding: 2% 0;
+    background: var(--primary)00;
+    color: var(--secondary);
+    text-align: center;
+}
+
+.sestim-donials {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 15px 20px;
+}
+
+.sectionesag {
+    width: 195px;
+    height: 3px;
+    background: #0059ff;
+    margin: 23px auto;
+}
+
+/* Контейнер для стрелочек и прокручиваемых отзывов */
+.reviews-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Контейнер с отзывами */
+.sagestim-lonials {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 3%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Стиль для отзыва */
+.vemotau-vokusipol {
+    flex: 0 0 33.33%; /* Каждый отзыв занимает 33.33% ширины */
+    max-width: 33.33%; /* Максимальная ширина элемента */
+    box-sizing: border-box;
+    padding: 15px;
+    transition: transform 1s;
+    word-wrap: break-word;
+    white-space: normal;
+    flex-grow: 0; /* Убираем возможность сжатия */
+}
+
+/* Анимация появления отзыва */
+@keyframes ani {
+    0% { transform: translateX(-150%); }
+    100% { transform: translateX(0); }
+}
+
+.vemotau-vokusipol {
+    animation: ani 1s forwards;
+}
+
+.testimonial {
+    background: #111111af;
+    padding: 28px;
+    border-radius: 3%;
+    transition: 1s;
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.testimonial:hover {
+    transform: scale(1.1);
+}
+
+.testimonial .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #444;
+    color: white;
+    font-size: 24px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* Стили для имени */
+.gecedanam {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* Стили для рейтинга */
+.apogered-gselected {
+    background: rgb(168,1,159);
+    background: linear-gradient(42deg, rgba(168,1,159,1) 0%, rgba(126,10,148,1) 46%, rgba(12,135,214,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+/* Стиль для кнопок прокрутки */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-btn.left {
+    left: 10px;
+
+    background: transparent;
+}
+
+.scroll-btn.right {
+    right: 10px;
+    background: transparent;
+}
+
+
+
+        
+/* Медиазапросы для адаптивности */
+@media screen and (max-width: 960px) {
+    .vemotau-vokusipol {
+        flex: 0 0 50%; /* На экранах до 960px каждый отзыв занимает 50% ширины */
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .vemotau-vokusipol {
+        flex: 0 0 100%; /* На экранах до 600px каждый отзыв занимает 100% ширины */
+        max-width: 100%;
+    }
+}
+
+
+@media screen and (max-width:960px) {
+  .complist{
+    flex: 100%;
+    max-width: 100%;
+  }
+  }
+  
+  @media screen and (max-width:600px) {
+  .complist{
+    flex: 100%;
+    max-width: 100%;
+  }
+  }
+
+  @media screen and (max-width:960px) {
+    .comps{
+      flex: 100%;
+      max-width: 100%;
+    }
+    }
+    
+    @media screen and (max-width:600px) {
+    .comps{
+      flex: 100%;
+      max-width: 100%;
+    }
+    }
+    
+    @media screen and (max-width:960px) {
+      .section1{
+        flex: 100%;
+        max-width: 100%;
+      }
+      }
+      
+      @media screen and (max-width:600px) {
+      .section1{
+        flex: 100%;
+        max-width: 100%;
+      }
+      }

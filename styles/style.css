@@ -1,0 +1,23 @@
+body {
+    /* Устанавливаем градиентный фон */
+    background: rgb(24, 24, 24);
+    /* Убираем отступы и поля */
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(199, 199, 199);
+    line-height: 1.6;
+    padding: 0;
+  }
+
+  .logo {
+    width: 150px;
+    transition: 0.75s;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logo:hover {
+    transform:scale(1.1)
+  }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>PowerPC - сборки пк</title>
+    <link rel="stylesheet" href="styles/styles.css?ver=10">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <script src="//code.jivo.ru/widget/GbaAC1RpwE" async></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <div id="preloader">
+        <div class="spinner"></div>
+      </div>
+<header>
+    <div class="header_inner responsive-wrapper">
+        <style>
+            a {
+                text-decoration: none; /* Убираем подчёркивание */
+            }
+        </style>
+        <a href="#">
+            <img src="logo.png" class="logo" alt="Логотип">
+        </a>
+<nav class="burger">
+    <input id="burger-toggle" type="checkbox">
+    <label for="burger-toggle">
+      <span></span>
+    </label>
+    <ul>
+        <li><a href="#sborki">Сборки</a></li>
+        <li><a href="#telegram">Контакты</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+       <!-- <li><a href="personal_cabinet.html">Личный кабинет</a></li> Ссылка на личный кабинет -->
+    </ul>
+</nav>
+
+<button class="cart" onclick="toggleCartPopup()" style="position: relative;">
+    <img src="cart.png" class="cart">
+    <span id="cartCount" style="display: none; position: absolute; top: 0; right: 18px; background: red; color: white; border-radius: 50%; padding: 2px 5px; font-size: 12px;">0</span> <!-- Элемент для отображения количества товаров -->
+</button> <!-- Иконка корзины -->
+
+<div class="overlay" id="overlay" style="display: none;"></div> <!-- Элемент для размытия фона -->
+
+<div class="cart-popup" id="cartPopup" style="display: none; z-index: 10000">
+    <h2>Ваша корзина:</h2>
+    <p></p>
+    <div class="item-list"></div>
+    
+    <!-- Форма для ввода данных покупателя -->
+    <div class="customer-info">
+        <h3>Ваши данные для заказа:</h3>
+        <label for="customerName">Имя:</label>
+        <input type="text" id="customerName" required>
+        
+        <label for="customerEmail">Email:</label>
+        <input type="email" id="customerEmail" required>
+        
+        <label for="customerAddress">Адрес доставки:</label>
+                <div style="position: relative; width: 100%; display: flex; flex-direction: column; align-items: center;"> <!-- Центрируем содержимое -->
+            <input type="text" id="customerAddress" placeholder="Введите адрес доставки" required>
+            <ul id="suggestions" class="autocomplete-suggestions" style="display: none;"></ul>
+        </div>
+    </div>
+    
+    <button class="close-button" onclick="toggleCartPopup()">Закрыть</button>
+    <button class="checkout-button" onclick="checkout()">Оформить заказ</button>
+</div>
+
+    </div>
+</header>
+<main>
+    <div class="section1" id="sborki2">
+        <h2>Ваш компьютер, ваша сила — PowerPC!</h2>
+        <p class="opis">Наш сайт предлагает ассортимент готовых сборок ПК,<br> идеально подходящих для игр, работы и творчества.</p>
+        <div class="knopka">
+            <style>
+                a {
+                 text-decoration: none; /* Убираем подчёркивание */
+                }
+               </style>
+        <a href="#sborki">ПЕРЕЙТИ В КАТАЛОГ <span class="arrow">&#8594;</span></a>
+    </div>
+</div>
+</main>
+
+    <div class="computers" id="sborki">
+    <div class="sections" id="sborki1">
+        <h1>Выбери пк на свой вкус</h1>
+        <p>Ты можешь выбрать пк под свой ценовой сегмент и предпочтения</p>
+    </div>
+    <div class="complist">
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left" id="scrollLeft">&#10094;</button>
+            <div class="scroll-container" id="scrollContainer">
+                <!-- Компьютеры будут добавляться сюда -->
+            </div>
+            <button class="scroll-btn right" id="scrollRight">&#10095;</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="modalsContainer"></div>
+
+        <div class="koguvcavis-varazdel" id="reviews">
+    <div class="sestim-donials">
+        <p style="color: rgb(199, 199, 199)"><h1>Отзывы</h1></p>
+        <div class="sectionesag"></div>
+        <div class="reviews-wrapper">
+            <!-- Кнопка прокрутки влево -->
+            <button class="scroll-btn left" onclick="scrollReviews(-1)">&#10094;</button>
+            
+            <!-- Контейнер с отзывами -->
+            <div class="sagestim-lonials">
+                <!-- Отзывы будут вставляться сюда -->
+            </div>
+            
+            <!-- Кнопка прокрутки вправо -->
+            <button class="scroll-btn right" onclick="scrollReviews(1)">&#10095;</button>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="partners">
+    <p class="footer__title">Наши партнеры</p>
+    <ul class="footer__partners-list">
+        <li class="footer__partners-li"><img src="iubip.png" class="waitlazzyload lazyloaded" alt="иубип"></li>
+    </ul>
+</div>
+
+    <help>
+        <div class="helped" id="telegram">
+            <h2>Контакты</h2>
+            <nav class="help1">
+                <ul class="listing">
+                    <li><a href="https://t.me/powerpc_ch"><img src="telegram.png" width="40px "alt="Telegram" class="listed"></a></li>
+                    <li><a href="https://vk.com/durov"><img src="vk.png" width="40px" alt="ВКонтакте" class="listed"></a></li>
+                    <li><a href="https://wa.me/+79381504232"><img src="whatsapp.png" width="40px" alt="Whatsapp" class="listed"></a></li>
+                    <li><a href="https://youtube.com"><img src="youtube.png" width="40px" alt="Youtube" class="listed"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </help>
+    
+    <footer>
+        <p>&copy; PowerPc 2024</p>
+        <a href="Agreement.html">Пользовательское соглашение</a>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts/script.js?ver=5"></script>
+    <script src="scripts/scroll.js"></script>
+</body>
+</html>

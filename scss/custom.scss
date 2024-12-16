@@ -1,0 +1,41 @@
+// Custom.scss
+// Вариант А: Включите весь Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+// Custom.scss
+// Вариант Б. Включите части Bootstrap
+
+// 1. Сначала включите функции (чтобы Вы могли управлять цветами, SVG, вычислением и т.д.)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Включите сюда любые переопределения переменных по умолчанию
+
+// 3. Включите остальные требуемые таблицы стилей Bootstrap (включая любые отдельные таблицы стилей цветового режима)
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// 4. Включите сюда любые переопределения карт по умолчанию
+
+// 5. Include remainder of required parts
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 6. При необходимости включите любые другие части
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+
+// 7. При желании добавьте API утилит в последнюю очередь, чтобы генерировать классы на основе карты Sass в `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// 8. Добавьте сюда дополнительный пользовательский код
